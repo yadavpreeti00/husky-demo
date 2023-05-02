@@ -10,6 +10,8 @@
     "@types/node": "^16.18.25",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
+    "lint-staged": "^13.2.2",
+    "prettier": "^2.8.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
@@ -43,5 +45,12 @@
   },
   "devDependencies": {
     "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "npm eslint",
+      "npm prettier --write",
+      "npm test --watchAll=false --findRelatedTests --bail"
+    ]
   }
 }
