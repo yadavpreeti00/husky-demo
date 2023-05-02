@@ -46,15 +46,15 @@
   },
   "devDependencies": {
     "eslint": "^8.39.0",
-    "husky": "^8.0.0",
+    "husky": "^4.3.8",
     "sass-lint": "^1.13.1"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "npm run lint",
+    "*.{js,jsx,ts,tsx}": [
       "npx eslint",
       "npx prettier --write",
-      "npm test -- --watchAll=false --findRelatedTests --bail"
+      "npm test -- --watchAll=false --findRelatedTests --bail",
+      "npm run lint"
     ]
   }
 }
