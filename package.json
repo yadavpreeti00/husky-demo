@@ -46,6 +46,12 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.2.2"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo \"Running pre-commit checks...\" && echo \"This may take a few moments...\" && lint-staged",
+      "pre-push": "npm run build"
+    }
+  },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "npx prettier --write",
