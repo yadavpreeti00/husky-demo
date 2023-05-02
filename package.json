@@ -44,13 +44,14 @@
     ]
   },
   "devDependencies": {
+    "eslint": "^8.39.0",
     "husky": "^8.0.0"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
-      "npm eslint",
-      "npm prettier --write",
-      "npm test --watchAll=false --findRelatedTests --bail"
+      "npx eslint",
+      "npx prettier --write",
+      "npm test -- --watchAll=false --findRelatedTests --bail"
     ]
   }
 }
