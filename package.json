@@ -53,8 +53,7 @@
     "*.{js,jsx,ts,tsx}": [
       "npx eslint",
       "npx prettier --write",
-      "npm test -- --watchAll=false --findRelatedTests --bail",
-      "npm run lint"
+      "npm test -- --watchAll=false --findRelatedTests --bail"
     ]
   }
 }
