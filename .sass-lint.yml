@@ -1,0 +1,11 @@
+options:
+  formatter: stylish
+  merge-default-rules: true
+rules:
+  no-color-literals:
+    severity: error
+    # The regex to match color literals
+    # (hex codes, RGB and HSL functions, and color names)
+    pattern: '(#([a-fA-F0-9]{3}){1,2}|rgba?|hsla?|\b(?:red|green|blue|yellow|orange|purple|pink|black|white|gray)\b)'
+    # The error message to show when the rule is violated
+    message: "Color literals are not allowed. Please use SCSS variables instead."

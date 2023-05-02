@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint": "sass-lint '**/*.scss'"
   },
   "eslintConfig": {
     "extends": [
@@ -45,10 +46,12 @@
   },
   "devDependencies": {
     "eslint": "^8.39.0",
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "sass-lint": "^1.13.1"
   },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx}": [
+      "npm run lint",
       "npx eslint",
       "npx prettier --write",
       "npm test -- --watchAll=false --findRelatedTests --bail"
